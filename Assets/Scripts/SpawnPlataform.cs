@@ -6,7 +6,7 @@ public class SpawnPlataform : MonoBehaviour
 {
     public List<GameObject> plataformsList = new List<GameObject>();
     Transform _transform;
-    int contador = 0;
+    int contador = 1;
     bool proximo;
     float offSet = 15;
     float plataformX;
@@ -18,12 +18,9 @@ public class SpawnPlataform : MonoBehaviour
 
     void Start()
     {
-        //for (int i = 0; i < plataformsList.Count; i++)
-        //{
-        //    p = Instantiate(plataformsList[Random.Range(0, 4)], new Vector2(i * 25, 0), transform.rotation).transform;
-        //    Debug.Log(proximo);
-
-        //}
+        
+      
+        
     }
 
     // Update is called once per frame
@@ -31,11 +28,12 @@ public class SpawnPlataform : MonoBehaviour
     {
         
         var playerX = Player.instance.transform.position.x;
-        if (playerX > respawContador * 25)
+        if (playerX > respawContador * 17)
         {
             var p = Instantiate(plataformsList[Random.Range(0, 4)], new Vector2(contador * 25, 0), transform.rotation).transform;
             contador++;
             respawContador++;
+            Destroy(p.gameObject, 10f);
         }
        
        
