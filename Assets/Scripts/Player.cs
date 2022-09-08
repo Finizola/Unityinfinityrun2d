@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rig2D.velocity = new Vector2(4f, rig2D.velocity.y);
+        rig2D.velocity = new Vector2(6f, rig2D.velocity.y);
         
         if(Input.GetMouseButtonDown(0))
         {

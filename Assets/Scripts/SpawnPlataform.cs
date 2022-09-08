@@ -8,7 +8,6 @@ public class SpawnPlataform : MonoBehaviour
     Transform _transform;
     int contador = 1;
     bool proximo;
-    float offSet = 15;
     float plataformX;
     float deadEnd;
     int respawContador = 1;
@@ -30,17 +29,31 @@ public class SpawnPlataform : MonoBehaviour
         var playerX = Player.instance.transform.position.x;
         if (playerX > respawContador * 17)
         {
+
             var p = Instantiate(plataformsList[Random.Range(0, 4)], new Vector2(contador * 25, 0), transform.rotation).transform;
+            var offSet = -playerX + p.GetComponent<BoxCollider2D>().bounds.max.x;
             contador++;
             respawContador++;
-            Destroy(p.gameObject, 10f);
+            if(offSet > contador *15)
+            {
+                Destroy(p.gameObject, 10f);
+                Debug.Log("boom");
+            }
+
+            //Debug.Log($" BOUDS:{p.GetComponent<BoxCollider2D>().bounds.max.x}");
+            Debug.Log($"P: {p.transform.position.x}");
+            Debug.Log(offSet);
+            //offSet = p.transform.position.x - playerX;
+            //Debug.Log(offSet * 1.33);
+            //Debug.Log($"posicao do P: {p.transform.position.x} \n posicao do Player: {playerX}");
+            //Debug.Log($" contador:{contador} \n respawcontador:{respawContador}");
         }
        
        
             //plataformX = p.GetComponent<Collider2D>().bounds.max.x;
             
-            deadEnd = playerX - offSet;
-            Debug.Log($"plataforma: {plataformX}\n player: {playerX}");
+            //deadEnd = playerX - offSet;
+            //Debug.Log($"plataforma: {plataformX}\n player: {playerX}");
             //Destroy(p, 1f);
             //if (plataformX > deadEnd)
             //{
