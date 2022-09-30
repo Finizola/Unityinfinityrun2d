@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3961756299313130780}
-  - component: {fileID: 8901583603276739494}
+  - component: {fileID: 7437927256597158650}
   m_Layer: 3
   m_Name: Plataform C
   m_TagString: TerrainA
@@ -33,8 +33,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8901583603276739494
-BoxCollider2D:
+--- !u!60 &7437927256597158650
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.8}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,9 +56,20 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 24.17, y: 1.09}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 8.987033, y: 1.2432337}
+      - {x: 4.8940287, y: 0.160519}
+      - {x: 0.98517084, y: -0.12590957}
+      - {x: -2.3456714, y: 0.08714199}
+      - {x: -8.144031, y: 1.3192422}
+      - {x: -10.538125, y: 0.8938571}
+      - {x: -11.778426, y: 1.2999763}
+      - {x: -11.774187, y: -1.1740379}
+      - {x: -0.5877852, y: -0.80901706}
+      - {x: 0.58778536, y: -0.80901694}
+      - {x: 12.054703, y: -1.1127725}
+      - {x: 11.858307, y: 1.434927}
 --- !u!1 &3961756299740959534
 GameObject:
   m_ObjectHideFlags: 0

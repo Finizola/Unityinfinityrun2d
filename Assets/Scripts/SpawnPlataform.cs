@@ -22,8 +22,8 @@ public class SpawnPlataform : MonoBehaviour
         if (playerX >= respawContador * 17)
         {
             //Debug.Log(playerX);
-            var p = Instantiate(plataformsList[Random.Range(0, 4)], new Vector2(contador * 25, 0), transform.rotation).transform;
-            var offSet = -playerX + p.GetComponent<BoxCollider2D>().bounds.max.x;
+            var p = Instantiate(plataformsList[Random.Range(0, 4)], new Vector2(contador * 25,0 ), transform.rotation).transform;
+            var offSet = -playerX + p.GetComponent<Collider2D>().bounds.max.x;
             contador++;
             respawContador++;
            

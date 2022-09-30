@@ -8,6 +8,7 @@ TagManager:
   - TerrainB
   - TerrainC
   - TerrainD
+  - Bullet
   layers:
   - Default
   - TransparentFX
